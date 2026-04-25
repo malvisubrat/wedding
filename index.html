@@ -1097,7 +1097,7 @@
 
         <div style="display:flex; gap:8px; justify-content:flex-end;">
           <button type="button" class="btn secondary" id="rsvp-cancel">Cancel</button>
-          <button type="submit" class="btn" id="rsvp-submit">Send RSVP</button>
+          <button id="send_rsvp_btn" type="submit" class="btn" id="rsvp-submit">Send RSVP</button>
         </div>
 
         <!-- <div style="margin-top:12px; display:flex; gap:8px; justify-content:space-between; align-items:center;">
@@ -1112,6 +1112,7 @@
   </div>
 
   <script>
+    let isLoading = false;
     /* =========================
        Inline JS - deferred behavior
        - i18n: Italian if browser language starts with 'it'
@@ -1421,7 +1422,7 @@ const celebrationOverlay = document.getElementById('celebration-overlay');
       // validation
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      const attending = document.getElementById('attending').value;
+      //const attending = document.getElementById('attending').value;
       const guests = document.getElementById('guests').value;
       const messages = document.getElementById('messages').value.trim();
 
@@ -1431,7 +1432,7 @@ const celebrationOverlay = document.getElementById('celebration-overlay');
 
       if (!name) { ERR_NAME.textContent = strings[lang].nameRequired; valid = false; }
       if (!email || !/^\S+@\S+\.\S+$/.test(email)) { ERR_EMAIL.textContent = strings[lang].emailRequired; valid = false; }
-      if (!attending) { alert(strings[lang].attendingRequired); valid = false; }
+      //if (!attending) { alert(strings[lang].attendingRequired); valid = false; }
 
       if (!valid) return;
 
@@ -1439,7 +1440,8 @@ const celebrationOverlay = document.getElementById('celebration-overlay');
           
           const formData = new FormData(rsvpForm); // Extract data from form
           const data = Object.fromEntries(formData); // Convert to plain object
-          
+          isLoading = true;
+          document.getElementById('send_rsvp_btn').innerHTML = 'Saving ...';
           fetch(atob(scriptURL), { method: 'POST', body: formData})
           .then(response => {
             alert(strings[lang].savedAlert.replace('PLACE',name.toLocaleUpperCase()));
@@ -1448,6 +1450,7 @@ const celebrationOverlay = document.getElementById('celebration-overlay');
             showCelebration();
           })
           .catch(error => console.error('Error!', error.message))
+          .finally(()=>document.getElementById('send_rsvp_btn').innerHTML = 'Send RSVP')
         });
     });
 
