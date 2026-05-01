@@ -12,19 +12,19 @@
         https://source.unsplash.com/1600x1200/?amalfi,wedding
       but note those query endpoints can occasionally return errors.
     - Change colors: edit CSS variables near the top of the <style> block (--accent, --muted, --bg, --card).
-    - Change names, date, venue, schedule: search for placeholders (Malvi & Subrat, 22 July 2026, Angul, Odisha, India).
+    - Change names, date, venue, schedule: search for placeholders (Malvi & Subrat, 22 July 2026, Karanda, Odisha, India).
     - To enable server-side RSVP: replace the localStorage save in the RSVP submit handler with a fetch() POST to your endpoint.
     - This file uses Google Fonts (external). All other CSS/JS is embedded.
-    - Map: embedded Google Maps iframe is centered on Angul, Odisha, India. If you prefer a different map provider, replace the iframe src.
+    - Map: embedded Google Maps iframe is centered on Karanda, Odisha, India. If you prefer a different map provider, replace the iframe src.
   -->
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Malvi & Subrat — Wedding in Angul, Odisha, India. Join us for a warm, elegant celebration." />
+  <meta name="description" content="Malvi & Subrat — Wedding in Karanda, Odisha, India. Join us for a warm, elegant celebration." />
   <meta name="theme-color" content="#E07A5F" />
   <!-- Open Graph -->
   <meta property="og:title" content="Malvi & Subrat — Wedding" />
-  <meta property="og:description" content="Join Malvi & Subrat for their wedding in Angul, Odisha, India. Ceremony, reception, and RSVP." />
+  <meta property="og:description" content="Join Malvi & Subrat for their wedding in Karanda, Odisha, India. Ceremony, reception, and RSVP." />
   <meta property="og:image" content="https://picsum.photos/id/1018/1600/900" />
   <meta property="og:type" content="website" />
   <title>Malvi & Subrat — Wedding</title>
@@ -155,7 +155,7 @@
     .hero{
       grid-column:1/-1;
       position:relative;
-      min-height:60vh;
+      min-height:74vh;
       display:flex;
       align-items:center;
       border-radius:var(--radius);
@@ -166,13 +166,14 @@
     .hero .bg{
       position:absolute;
       inset:0;
-      background-image: url("https://picsum.photos/id/1018/1600/900");
+      /* background-image: url("https://picsum.photos/id/1018/1600/900"); */
+      background-image: url("wedding.jpeg");
       background-size:cover;
       background-position:center;
       transform:translateZ(0);
       will-change:transform;
       filter:contrast(1.02) saturate(1.05) brightness(0.95);
-      z-index:0;
+      z-index:2;
     }
     .hero .overlay{
       position:absolute;
@@ -886,7 +887,7 @@
         <div class="mark" aria-hidden="true">M&amp;S</div>
         <div>
           <div style="font-family:'Playfair Display',serif;font-weight:700;" class="gold-text">Malvi &amp; Subrat</div>
-          <div style="font-size:0.85rem;color:var(--muted-text)">22 July 2026 — Angul, Odisha, India</div>
+          <div style="font-size:0.85rem;color:var(--muted-text)">22 July 2026 — Karanda, Odisha, India</div>
         </div>
       </a>
 
@@ -904,9 +905,9 @@
       <div class="bg" id="hero-bg" aria-hidden="true"></div>
       <div class="overlay" aria-hidden="true"></div>
       <div class="content">
-        <div class="text">
+        <div class="text" hidden>
           <h1 id="headline" class="reveal">Malvi &amp; Subrat</h1>
-          <p class="lead reveal" id="subhead">Join us for a warm celebration in Angul, Odisha, India — 22 July 2026</p>
+          <p class="lead reveal" id="subhead">Karanda, Odisha, India — 22 July 2026</p>
           <div class="cta reveal">
             <a class="btn" href="#venue" id="cta-details">Details</a>
             <button class="btn secondary" id="cta-rsvp">RSVP</button>
@@ -921,7 +922,7 @@
       <!-- <section id="our-story" class="card reveal" aria-labelledby="story-title">
         <h2 id="story-title">Our Story</h2>
         <p>
-          Malvi and Subrat met on a sunlit terrace overlooking the sea. Their love grew with long walks, shared meals, and a love of music. They invite you to celebrate their wedding in Angul, Odisha, India.
+          Malvi and Subrat met on a sunlit terrace overlooking the sea. Their love grew with long walks, shared meals, and a love of music. They invite you to celebrate their wedding in Karanda, Odisha, India.
         </p>
         <p>
           Ceremony and reception will be intimate and photo-forward — expect warm terracotta tones, olive branches, and coastal-inspired details.
@@ -936,7 +937,7 @@
             <div class="time">15:00</div>
             <div>
               <div style="font-weight:700">Ceremony</div>
-              <div class="small">Local ceremony venue, Angul</div>
+              <div class="small">Local ceremony venue, Karanda</div>
             </div>
           </div>
           <div class="item">
@@ -950,7 +951,7 @@
             <div class="time">18:00</div>
             <div>
               <div style="font-weight:700">Reception</div>
-              <div class="small">Dinner &amp; dancing — Angul celebration</div>
+              <div class="small">Dinner &amp; dancing — Karanda celebration</div>
             </div>
           </div>
         </div>
@@ -959,22 +960,22 @@
       <!-- Venue -->
       <section id="venue" class="card reveal" aria-labelledby="venue-title">
         <h2 id="venue-title">Venue</h2>
-        <p><strong>Angul, Odisha, India</strong></p>
-        <p class="small">Address: Angul, Odisha, India (central Angul area). Please use this map for directions and local landmarks.</p>
+        <p><strong>Karanda, Odisha, India</strong></p>
+        <p class="small">Address: Karanda, Odisha, India (central Karanda area). Please use this map for directions and local landmarks.</p>
 
-        <!-- Embedded map centered on Angul, Odisha, India -->
-        <div class="map" role="region" aria-label="Map showing Angul, Odisha, India">
-          <!-- Google Maps embed centered on Angul, Odisha, India -->
+        <!-- Embedded map centered on Karanda, Odisha, India -->
+        <div class="map" role="region" aria-label="Map showing Karanda, Odisha, India">
+          <!-- Google Maps embed centered on Karanda, Odisha, India -->
           <iframe
-            title="Map: Angul, Odisha, India"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1234567890123!2d85.1000000!3d20.8500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190b0000000001%3A0x0000000000000000!2sAngul%2C%20Odisha%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000"
+            title="Map: Karanda, Odisha, India"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3731.9495593241263!2d85.33791047184249!3d20.71227277914173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1777637874164!5m2!1sen!2sin"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             aria-hidden="false"
             ></iframe>
         </div>
 
-        <p class="small">Nearest major transit: Angul Railway Station. Shuttle details will be shared with RSVP guests.</p>
+        <p class="small">Nearest major transit: Meramandali Railway Station. Shuttle details will be shared with RSVP guests.</p>
       </section>
 <div class="section-divider"><span>✦</span></div>
       <!-- Gallery -->
@@ -1010,7 +1011,7 @@
         <h2 id="print-title">Printable Invitation</h2>
         <div style="padding:18px; border:1px dashed rgba(0,0,0,0.06); border-radius:8px;">
           <div style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:8px;">Malvi &amp; Subrat</div>
-          <div style="color:var(--muted-text); margin-bottom:12px;">22 July 2026 — Angul, Odisha, India</div>
+          <div style="color:var(--muted-text); margin-bottom:12px;">22 July 2026 — Karanda, Odisha, India</div>
           <div style="font-size:0.95rem; color:var(--muted-text);">Please join us for ceremony at 15:00 followed by reception. RSVP required.</div>
         </div>
       </section>
@@ -1021,7 +1022,7 @@
       <div class="card reveal" role="complementary">
         <h2>Details</h2>
         <p class="small"><strong>Date:</strong> 22 July 2026</p>
-        <p class="small"><strong>Location:</strong> Angul, Odisha, India</p>
+        <p class="small"><strong>Location:</strong> Karanda, Odisha, India</p>
         <p class="small"><strong>Dress code:</strong> Smart casual — light fabrics recommended</p>
         <div style="margin-top:12px; display:flex; gap:8px;">
           <a class="btn" href="#rsvp" id="rsvp-open-2">RSVP</a>
@@ -1031,7 +1032,7 @@
 
       <div class="card reveal">
         <h2>Accommodations</h2>
-        <p class="small">We recommend hotels near Angul town center and transit hubs. Shuttle service will be arranged for guests — details after RSVP.</p>
+        <p class="small">We recommend hotels near Satmile and transit hubs. Shuttle service will be arranged for guests — details after RSVP.</p>
       </div>
 
       <div class="card reveal">
@@ -1043,7 +1044,7 @@
     <!-- Footer -->
     <footer>
       <div>&copy; <span id="year"></span> Malvi &amp; Subrat</div>
-      <div class="small">Made with love — Angul, Odisha</div>
+      <div class="small">Made with love — Karanda, Odisha</div>
     </footer>
   </div>
 
