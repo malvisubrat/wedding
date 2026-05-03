@@ -855,9 +855,9 @@
     <div class="invite-flap invite-flap-left" aria-hidden="true"></div>
     <div class="invite-flap invite-flap-right" aria-hidden="true"></div>
     <div class="invite-content">
-      <div class="invite-label">RSVP Confirmed</div>
+      <div class="invite-label" id="invite-label-text">RSVP Confirmed</div>
       <h1>Malvi & Subrat</h1>
-      <p>Your response has been received. Open your elegant invitation to continue to the celebration.</p>
+      <p id="invite-paragraph-text">Your response has been received. Open your elegant invitation to continue to the celebration.</p>
       <button class="btn" id="invite-open">Continue</button>
     </div>
   </div>
@@ -934,11 +934,11 @@
         <h2 id="schedule-title">Schedule</h2>
         <div class="schedule">
           <div class="item">
-            <div class="time">21st July</div>
+            <div class="time" id="schedule-date-1">21st July</div>
             <div>
-              <div style="font-weight:700">Haldi & Mehndi Day</div>
+              <div style="font-weight:700" id="schedule-title-1">Haldi & Mehndi Day</div>
               <div class="small">
-                <ul style="line-height: 22px;">
+                <ul style="line-height: 22px;" id="schedule-list-1">
                   <li><strong>Haldi Ceremony:</strong> Morning ritual where turmeric paste is applied to the bride and groom for blessings and purification.</li>
                   <li><strong>Mehndi Ceremony:</strong> Afternoon event where intricate henna designs are applied to the bride's hands and feet, symbolizing joy and beauty.</li>
                 </ul>
@@ -946,26 +946,27 @@
             </div>
           </div>
           <div class="item">
-            <div class="time">22nd July</div>
+            <div class="time" id="schedule-date-2">22nd July</div>
             <div>
-              <div style="font-weight:700">Wedding Ceremony & Vidai</div>
+              <div style="font-weight:700" id="schedule-title-2">Wedding Ceremony & Vidai</div>
               <div class="small">
-                <ul style="line-height: 22px;">
-                  <li><strong>13:00 - Lunch</strong>  A family meal shared with guests, marking the beginning of the wedding celebrations for the day.</li>
+                <ul style="line-height: 22px;" id="schedule-list-2">
+                  <li><strong>13:00 - Lunch:</strong>  A family meal shared with guests, marking the beginning of the wedding celebrations for the day.</li>
                   <li><strong>15:00 - Wedding Ceremony:</strong> Traditional rituals and vows exchanged in a beautiful outdoor setting, followed by a celebratory procession.</li>
-                  <li><strong>Vidai</strong> A heartfelt farewell to the bride as she departs from her parental home to start her new life with the groom.</li>
+                  <li><strong>Vidai:</strong> A heartfelt farewell to the bride as she departs from her parental home to start her new life with the groom.</li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="time">24th July</div>
+            <div class="time" id="schedule-date-3">24th July</div>
             <div>
-              <div style="font-weight:700">Reception Day in Kumurisingha village</div>
+              <div style="font-weight:700" id="schedule-title-3">Reception Day in Kumurisingha village</div>
               <div class="small">
-                <ul style="line-height: 22px;">
-                  <li><strong>13:00 - </strong>Reception Ceremony A formal event where the newly married couple is introduced to extended family, friends, and guests.</div></li>
+                <ul style="line-height: 22px;" id="schedule-list-3">
+                  <li><strong>13:00 - Reception Ceremony:</strong> A formal event where the newly married couple is introduced to extended family, friends, and guests.</li>
                 </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -975,7 +976,7 @@
       <section id="venue" class="card reveal" aria-labelledby="venue-title">
         <h2 id="venue-title">Venue</h2>
         <p><strong>Karanda, Odisha, India</strong></p>
-        <p class="small">Address: Karanda, Odisha, India (central Karanda area). Please use this map for directions and local landmarks.</p>
+        <p class="small" id="venue-description">Address: Karanda, Odisha, India (central Karanda area). Please use this map for directions and local landmarks.</p>
 
         <!-- Embedded map centered on Karanda, Odisha, India -->
         <div class="map" role="region" aria-label="Map showing Karanda, Odisha, India">
@@ -995,7 +996,7 @@
       <!-- Gallery -->
       <section id="gallery" class="card reveal" aria-labelledby="gallery-title">
         <h2 id="gallery-title">Gallery</h2>
-        <p class="small">A few moments to set the mood — click to enlarge.</p>
+        <p class="small" id="gallery-small">A few moments to set the mood — click to enlarge.</p>
 
         <!-- Gallery grid: images are lazy-loaded and include data-full for high-res lightbox -->
         <div class="gallery-grid" id="gallery-grid">
@@ -1034,9 +1035,9 @@
     <!-- Sidebar (right column) -->
     <aside class="sidebar" aria-label="Sidebar">
       <div class="card reveal" role="complementary">
-        <h2>Details</h2>
-        <p class="small"><strong>Date:</strong> 22 July 2026</p>
-        <p class="small"><strong>Location:</strong> Karanda, Odisha, India</p>
+        <h2 id="details-title">Details</h2>
+        <p class="small" id="details-date"><strong>Date:</strong> 22 July 2026</p>
+        <p class="small" id="details-location"><strong>Location:</strong> Karanda, Odisha, India</p>
         <!-- <p class="small"><strong>Dress code:</strong> Smart casual — light fabrics recommended</p> -->
         <div style="margin-top:12px; display:flex; gap:8px;">
           <a class="btn" href="#rsvp" id="rsvp-open-2">RSVP</a>
@@ -1045,20 +1046,20 @@
       </div>
 
       <div class="card reveal">
-        <h2>Accommodations</h2>
-        <p class="small">We recommend hotels near Dhenkanal and transit hubs. Shuttle service will be arranged for guests — details after RSVP.</p>
+        <h2 id="accommodations-title">Accommodations</h2>
+        <p class="small" id="accommodations-text">We recommend hotels near Dhenkanal and transit hubs. Shuttle service will be arranged for guests — details after RSVP.</p>
       </div>
 
       <div class="card reveal">
-        <h2>Contact</h2>
-        <p class="small">For questions: <a style="color:#adcc00; text-decoration:none;" href="mailto:sb54086@gmail.com">Email</a></p>
+        <h2 id="contact-title">Contact</h2>
+        <p class="small" id="contact-text">For questions: <a style="color:#adcc00; text-decoration:none;" href="mailto:sb54086@gmail.com">Email</a></p>
       </div>
     </aside>
 
     <!-- Footer -->
     <footer>
       <div>&copy; <span id="year"></span> Malvi &amp; Subrat</div>
-      <div class="small">Made with love — Karanda, Odisha</div>
+      <div class="small" id="footer-text">Made with love — Karanda, Odisha</div>
     </footer>
   </div>
 
@@ -1154,7 +1155,6 @@
 
       const strings = {
         en: {
-          //ourStory: 'Our Story',
           schedule: 'Schedule',
           venue: 'Venue',
           gallery: 'Gallery',
@@ -1167,10 +1167,48 @@
           attendingRequired: 'Please select attending or not.',
           savedAlert: 'Thank you PLACE — your RSVP has been saved.',
           noExport: 'No responses to export.',
-          clearConfirm: 'Clear all saved RSVP responses?'
+          clearConfirm: 'Clear all saved RSVP responses?',
+          headline: 'Malvi & Subrat',
+          subhead: 'Karanda, Odisha, India — 22 July 2026',
+          detailsTitle: 'Details',
+          detailsDate: 'Date:',
+          detailsLocation: 'Location:',
+          detailsDateValue: '22 July 2026',
+          detailsLocationValue: 'Karanda, Odisha, India',
+          accommodationsTitle: 'Accommodations',
+          accommodationsText: 'We recommend hotels near Dhenkanal and transit hubs. Shuttle service will be arranged for guests — details after RSVP.',
+          contactTitle: 'Contact',
+          contactText: 'For questions: ',
+          contactEmail: 'Email',
+          venueDescription: 'Address: Karanda, Odisha, India (central Karanda area). Please use this map for directions and local landmarks.',
+          gallerySmall: 'A few moments to set the mood — click to enlarge.',
+          footerText: 'Made with love — Karanda, Odisha',
+          inviteLabel: 'RSVP Confirmed',
+          inviteParagraph: 'Your response has been received. Open your elegant invitation to continue to the celebration.',
+          inviteContinue: 'Continue',
+          celebrationMessage: 'RSVP received — let the celebration begin!',
+          ctaDetails: 'Details',
+          ctaRsvp: 'RSVP',
+          formName: 'Full name',
+          formEmail: 'Email',
+          formGuests: 'Number of guests',
+          formMessages: 'Dietary notes or message',
+          buttonCancel: 'Cancel',
+          buttonSend: 'Send RSVP',
+          placeholderName: 'Your full name',
+          placeholderEmail: 'you@example.com',
+          placeholderMessages: 'Allergies, song requests, etc.',
+          scheduleDate1: '21st July',
+          scheduleTitle1: 'Haldi & Mehndi Day',
+          scheduleList1: '<li><strong>Haldi Ceremony:</strong> Morning ritual where turmeric paste is applied to the bride and groom for blessings and purification.</li><li><strong>Mehndi Ceremony:</strong> Afternoon event where intricate henna designs are applied to the bride\'s hands and feet, symbolizing joy and beauty.</li>',
+          scheduleDate2: '22nd July',
+          scheduleTitle2: 'Wedding Ceremony & Vidai',
+          scheduleList2: '<li><strong>13:00 - Lunch:</strong>  A family meal shared with guests, marking the beginning of the wedding celebrations for the day.</li><li><strong>15:00 - Wedding Ceremony:</strong> Traditional rituals and vows exchanged in a beautiful outdoor setting, followed by a celebratory procession.</li><li><strong>Vidai:</strong> A heartfelt farewell to the bride as she departs from her parental home to start her new life with the groom.</li>',
+          scheduleDate3: '24th July',
+          scheduleTitle3: 'Reception Day in Kumurisingha village',
+          scheduleList3: '<li><strong>13:00 - Reception Ceremony:</strong> A formal event where the newly married couple is introduced to extended family, friends, and guests.</li>'
         },
         it: {
-          //ourStory: 'La nostra storia',
           schedule: 'Programma',
           venue: 'Luogo',
           gallery: 'Galleria',
@@ -1183,7 +1221,46 @@
           attendingRequired: 'Seleziona la partecipazione.',
           savedAlert: 'Grazie PLACE — la tua risposta è stata salvata.',
           noExport: 'Nessuna risposta da esportare.',
-          clearConfirm: 'Cancellare tutte le risposte RSVP salvate?'
+          clearConfirm: 'Cancellare tutte le risposte RSVP salvate?',
+          headline: 'Malvi & Subrat',
+          subhead: 'Karanda, Odisha, India — 22 luglio 2026',
+          detailsTitle: 'Dettagli',
+          detailsDate: 'Data:',
+          detailsLocation: 'Luogo:',
+          detailsDateValue: '22 luglio 2026',
+          detailsLocationValue: 'Karanda, Odisha, India',
+          accommodationsTitle: 'Alloggi',
+          accommodationsText: 'Consigliamo hotel vicino a Dhenkanal e ai nodi di trasporto. È previsto un servizio navetta per gli ospiti — dettagli dopo RSVP.',
+          contactTitle: 'Contatto',
+          contactText: 'Per domande: ',
+          contactEmail: 'Email',
+          venueDescription: 'Indirizzo: Karanda, Odisha, India (area centrale di Karanda). Usa questa mappa per indicazioni e punti di riferimento locali.',
+          gallerySmall: 'Alcuni momenti per creare l\'atmosfera — clicca per ingrandire.',
+          footerText: 'Realizzato con amore — Karanda, Odisha',
+          inviteLabel: 'RSVP confermato',
+          inviteParagraph: 'La tua risposta è stata ricevuta. Apri il tuo elegante invito per continuare la festa.',
+          inviteContinue: 'Continua',
+          celebrationMessage: 'RSVP ricevuto — che la festa abbia inizio!',
+          ctaDetails: 'Dettagli',
+          ctaRsvp: 'RSVP',
+          formName: 'Nome completo',
+          formEmail: 'Email',
+          formGuests: 'Numero di ospiti',
+          formMessages: 'Note dietetiche o messaggio',
+          buttonCancel: 'Annulla',
+          buttonSend: 'Invia RSVP',
+          placeholderName: 'Il tuo nome completo',
+          placeholderEmail: 'tuo@esempio.com',
+          placeholderMessages: 'Allergie, richieste musicali, ecc.',
+          scheduleDate1: '21 luglio',
+          scheduleTitle1: 'Giornata Haldi e Mehndi',
+          scheduleList1: '<li><strong>Cerimonia Haldi:</strong> Tradizionale rito mattutino in cui si applica una pasta di curcuma agli sposi per benedizioni e purificazione.</li><li><strong>Cerimonia Mehndi:</strong> Evento pomeridiano in cui si applicano disegni intricati di henné alle mani e ai piedi della sposa, simbolo di gioia e bellezza.</li>',
+          scheduleDate2: '22 luglio',
+          scheduleTitle2: 'Cerimonia nuziale e Vidai',
+          scheduleList2: '<li><strong>13:00 - Pranzo:</strong> Un pasto in famiglia condiviso con gli ospiti, che segna l\'inizio dei festeggiamenti del giorno.</li><li><strong>15:00 - Cerimonia nuziale:</strong> Rituali tradizionali e scambio di voti in uno splendido ambiente all\'aperto, seguiti da una processione di celebrazione.</li><li><strong>Vidai:</strong> Un commiato sentito alla sposa mentre lascia la casa dei genitori per iniziare la sua nuova vita con lo sposo.</li>',
+          scheduleDate3: '24 luglio',
+          scheduleTitle3: 'Giornata di ricevimento nel villaggio di Kumurisingha',
+          scheduleList3: '<li><strong>13:00 - Cerimonia di ricevimento:</strong> Un evento formale in cui la coppia appena sposata viene presentata a parenti, amici e invitati.</li>'
         }
       };
 
@@ -1202,10 +1279,96 @@
       if (rsvpOpen2) rsvpOpen2.textContent = strings[lang].rsvp;
       const rsvpTitle = document.getElementById('rsvp-title');
       if (rsvpTitle) rsvpTitle.textContent = strings[lang].rsvpTitle;
+      const scheduleTitleEl = document.getElementById('schedule-title');
+      if (scheduleTitleEl) scheduleTitleEl.textContent = strings[lang].schedule;
+      const venueTitleEl = document.getElementById('venue-title');
+      if (venueTitleEl) venueTitleEl.textContent = strings[lang].venue;
+      const galleryTitleEl = document.getElementById('gallery-title');
+      if (galleryTitleEl) galleryTitleEl.textContent = strings[lang].gallery;
       const exportBtn = document.getElementById('export-csv');
       if (exportBtn) exportBtn.textContent = strings[lang].exportCSV;
       const clearBtn = document.getElementById('clear-responses');
       if (clearBtn) clearBtn.textContent = strings[lang].clear;
+      const inviteOpen = document.getElementById('invite-open');
+
+      document.documentElement.lang = lang;
+      const headlineEl = document.getElementById('headline');
+      const subheadEl = document.getElementById('subhead');
+      const ctaDetails = document.getElementById('cta-details');
+      const ctaRsvp = document.getElementById('cta-rsvp');
+      if (headlineEl) headlineEl.textContent = strings[lang].headline;
+      if (subheadEl) subheadEl.textContent = strings[lang].subhead;
+      if (ctaDetails) ctaDetails.textContent = strings[lang].ctaDetails;
+      if (ctaRsvp) ctaRsvp.textContent = strings[lang].ctaRsvp;
+
+      const detailsTitle = document.getElementById('details-title');
+      const detailsDate = document.getElementById('details-date');
+      const detailsLocation = document.getElementById('details-location');
+      const accommodationsTitle = document.getElementById('accommodations-title');
+      const accommodationsText = document.getElementById('accommodations-text');
+      const contactTitle = document.getElementById('contact-title');
+      const contactText = document.getElementById('contact-text');
+      const venueDescriptionEl = document.getElementById('venue-description');
+      const gallerySmallEl = document.getElementById('gallery-small');
+      const footerText = document.getElementById('footer-text');
+      const inviteLabelText = document.getElementById('invite-label-text');
+      const inviteParagraphText = document.getElementById('invite-paragraph-text');
+      const celebrateMessage = document.querySelector('.celebration-message');
+
+      if (detailsTitle) detailsTitle.textContent = strings[lang].detailsTitle;
+      if (detailsDate) detailsDate.innerHTML = `<strong>${strings[lang].detailsDate}</strong> ${strings[lang].detailsDateValue}`;
+      if (detailsLocation) detailsLocation.innerHTML = `<strong>${strings[lang].detailsLocation}</strong> ${strings[lang].detailsLocationValue}`;
+      if (accommodationsTitle) accommodationsTitle.textContent = strings[lang].accommodationsTitle;
+      if (accommodationsText) accommodationsText.textContent = strings[lang].accommodationsText;
+      if (contactTitle) contactTitle.textContent = strings[lang].contactTitle;
+      if (contactText) contactText.innerHTML = `${strings[lang].contactText}<a style="color:#adcc00; text-decoration:none;" href="mailto:sb54086@gmail.com">${strings[lang].contactEmail}</a>`;
+      if (venueDescriptionEl) venueDescriptionEl.textContent = strings[lang].venueDescription;
+      if (gallerySmallEl) gallerySmallEl.textContent = strings[lang].gallerySmall;
+      if (footerText) footerText.textContent = strings[lang].footerText;
+      if (inviteLabelText) inviteLabelText.textContent = strings[lang].inviteLabel;
+      if (inviteParagraphText) inviteParagraphText.textContent = strings[lang].inviteParagraph;
+      if (inviteOpen) inviteOpen.textContent = strings[lang].inviteContinue;
+      if (celebrateMessage) celebrateMessage.textContent = strings[lang].celebrationMessage;
+
+      const scheduleDate1 = document.getElementById('schedule-date-1');
+      const scheduleTitle1 = document.getElementById('schedule-title-1');
+      const scheduleList1 = document.getElementById('schedule-list-1');
+      const scheduleDate2 = document.getElementById('schedule-date-2');
+      const scheduleTitle2 = document.getElementById('schedule-title-2');
+      const scheduleList2 = document.getElementById('schedule-list-2');
+      const scheduleDate3 = document.getElementById('schedule-date-3');
+      const scheduleTitle3 = document.getElementById('schedule-title-3');
+      const scheduleList3 = document.getElementById('schedule-list-3');
+
+      if (scheduleDate1) scheduleDate1.textContent = strings[lang].scheduleDate1;
+      if (scheduleTitle1) scheduleTitle1.textContent = strings[lang].scheduleTitle1;
+      if (scheduleList1) scheduleList1.innerHTML = strings[lang].scheduleList1;
+      if (scheduleDate2) scheduleDate2.textContent = strings[lang].scheduleDate2;
+      if (scheduleTitle2) scheduleTitle2.textContent = strings[lang].scheduleTitle2;
+      if (scheduleList2) scheduleList2.innerHTML = strings[lang].scheduleList2;
+      if (scheduleDate3) scheduleDate3.textContent = strings[lang].scheduleDate3;
+      if (scheduleTitle3) scheduleTitle3.textContent = strings[lang].scheduleTitle3;
+      if (scheduleList3) scheduleList3.innerHTML = strings[lang].scheduleList3;
+
+      const formNameLabel = document.querySelector('label[for="name"]');
+      const formEmailLabel = document.querySelector('label[for="email"]');
+      const formGuestsLabel = document.querySelector('label[for="guests"]');
+      const formMessagesLabel = document.querySelector('label[for="messages"]');
+      const inputName = document.getElementById('name');
+      const inputEmail = document.getElementById('email');
+      const inputMessages = document.getElementById('messages');
+      const rsvpCancelBtn = document.getElementById('rsvp-cancel');
+      const rsvpSubmitBtn = document.getElementById('send_rsvp_btn');
+
+      if (formNameLabel) formNameLabel.textContent = strings[lang].formName;
+      if (formEmailLabel) formEmailLabel.textContent = strings[lang].formEmail;
+      if (formGuestsLabel) formGuestsLabel.textContent = strings[lang].formGuests;
+      if (formMessagesLabel) formMessagesLabel.textContent = strings[lang].formMessages;
+      if (inputName) inputName.placeholder = strings[lang].placeholderName;
+      if (inputEmail) inputEmail.placeholder = strings[lang].placeholderEmail;
+      if (inputMessages) inputMessages.placeholder = strings[lang].placeholderMessages;
+      if (rsvpCancelBtn) rsvpCancelBtn.textContent = strings[lang].buttonCancel;
+      if (rsvpSubmitBtn) rsvpSubmitBtn.textContent = strings[lang].buttonSend;
 
       // Year in footer
       document.getElementById('year').textContent = new Date().getFullYear();
@@ -1229,15 +1392,19 @@
 
       // IntersectionObserver reveal animations
       const reveals = document.querySelectorAll('.reveal');
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      reveals.forEach(el => io.observe(el));
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => io.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('visible'));
+      }
 
       // Hero parallax
       const heroBg = document.getElementById('hero-bg');
@@ -1248,10 +1415,9 @@
 
       // Invitation overlay behavior
       const inviteOverlay = document.getElementById('invite-overlay');
-      const inviteOpenButton = document.getElementById('invite-open');
       const inviteCard = inviteOverlay.querySelector('.invite-card');
 
-      if (inviteOpenButton) inviteOpenButton.type = 'button';
+      if (inviteOpen) inviteOpen.type = 'button';
 
       function revealInvitation() {
         inviteCard.classList.add('open');
@@ -1272,8 +1438,8 @@
         }, 700);
       }
 
-      if (inviteOpenButton) {
-        inviteOpenButton.addEventListener('click', (event) => {
+      if (inviteOpen) {
+        inviteOpen.addEventListener('click', (event) => {
           event.preventDefault();
           closeInvitation();
         });
@@ -1477,6 +1643,8 @@ const celebrationOverlay = document.getElementById('celebration-overlay');
       const scriptURL = 'aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3aDlBcFB3UHBGSkdsNklrcG54QVhvM05ZcDg2QUZIMmo4bGtyaDJoNzN3Z2VwX1FYeDU1VVptS0tqeVI0OWhWdzYvZXhlYw';
           
           const formData = new FormData(rsvpForm); // Extract data from form
+          const browserLocale = navigator.language || navigator.userLanguage || 'en';
+          formData.append('locale', browserLocale);
           const data = Object.fromEntries(formData); // Convert to plain object
           isLoading = true;
           document.getElementById('send_rsvp_btn').innerHTML = 'Saving ...';
